@@ -161,6 +161,16 @@
 		356FFFF7163C437200FB81B7 /* CCTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 356FFFF6163C437200FB81B7 /* CCTextureAtlas.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		356FFFFA163C437200FB81B7 /* CCTextureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 356FFFF9163C437200FB81B7 /* CCTextureCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		356FFFFD163C437300FB81B7 /* CCTexturePVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 356FFFFC163C437300FB81B7 /* CCTexturePVR.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D9ACF6BA193E10EF00F89151 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6B9193E10EF00F89151 /* Entity.m */; };
+		D9ACF6BF193E118500F89151 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6BE193E118500F89151 /* Component.m */; };
+		D9ACF6C2193E11BE00F89151 /* RenderComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6C1193E11BE00F89151 /* RenderComponent.m */; };
+		D9ACF6C5193E121700F89151 /* HealthComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6C4193E121700F89151 /* HealthComponent.m */; };
+		D9ACF6C8193E125D00F89151 /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6C7193E125D00F89151 /* EntityManager.m */; };
+		D9ACF6CC193E199E00F89151 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6CB193E199E00F89151 /* System.m */; };
+		D9ACF6CF193E1A0900F89151 /* HealthSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6CE193E1A0900F89151 /* HealthSystem.m */; };
+		D9ACF6D2193E1D3D00F89151 /* EntityFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6D1193E1D3D00F89151 /* EntityFactory.m */; };
+		D9ACF6D5193E1F0400F89151 /* MoveComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6D4193E1F0400F89151 /* MoveComponent.m */; };
+		D9ACF6D8193E252600F89151 /* MoveSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9ACF6D7193E252600F89151 /* MoveSystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -459,6 +469,26 @@
 		356FFFFC163C437300FB81B7 /* CCTexturePVR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CCTexturePVR.m; path = libs/cocos2d/CCTexturePVR.m; sourceTree = "<group>"; };
 		356FFFFE163C437300FB81B7 /* CCTileMapAtlas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCTileMapAtlas.h; path = libs/cocos2d/CCTileMapAtlas.h; sourceTree = "<group>"; };
 		356FFFFF163C437300FB81B7 /* CCTileMapAtlas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CCTileMapAtlas.m; path = libs/cocos2d/CCTileMapAtlas.m; sourceTree = "<group>"; };
+		D9ACF6B8193E10EF00F89151 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		D9ACF6B9193E10EF00F89151 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		D9ACF6BD193E118500F89151 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		D9ACF6BE193E118500F89151 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		D9ACF6C0193E11BE00F89151 /* RenderComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderComponent.h; sourceTree = "<group>"; };
+		D9ACF6C1193E11BE00F89151 /* RenderComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderComponent.m; sourceTree = "<group>"; };
+		D9ACF6C3193E121700F89151 /* HealthComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthComponent.h; sourceTree = "<group>"; };
+		D9ACF6C4193E121700F89151 /* HealthComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthComponent.m; sourceTree = "<group>"; };
+		D9ACF6C6193E125D00F89151 /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		D9ACF6C7193E125D00F89151 /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
+		D9ACF6CA193E199E00F89151 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
+		D9ACF6CB193E199E00F89151 /* System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
+		D9ACF6CD193E1A0900F89151 /* HealthSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthSystem.h; sourceTree = "<group>"; };
+		D9ACF6CE193E1A0900F89151 /* HealthSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthSystem.m; sourceTree = "<group>"; };
+		D9ACF6D0193E1D3D00F89151 /* EntityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityFactory.h; sourceTree = "<group>"; };
+		D9ACF6D1193E1D3D00F89151 /* EntityFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityFactory.m; sourceTree = "<group>"; };
+		D9ACF6D3193E1F0400F89151 /* MoveComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveComponent.h; sourceTree = "<group>"; };
+		D9ACF6D4193E1F0400F89151 /* MoveComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveComponent.m; sourceTree = "<group>"; };
+		D9ACF6D6193E252600F89151 /* MoveSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveSystem.h; sourceTree = "<group>"; };
+		D9ACF6D7193E252600F89151 /* MoveSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveSystem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -701,6 +731,7 @@
 		356FFF02163C437000FB81B7 = {
 			isa = PBXGroup;
 			children = (
+				D9ACF6B7193E10C700F89151 /* Entity System */,
 				356FFF23163C437000FB81B7 /* MonsterWars */,
 				356FFF10163C437000FB81B7 /* Frameworks */,
 				356FFF0E163C437000FB81B7 /* Products */,
@@ -942,6 +973,57 @@
 			name = cocos2d;
 			sourceTree = "<group>";
 		};
+		D9ACF6B7193E10C700F89151 /* Entity System */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACF6C9193E198A00F89151 /* Systems */,
+				D9ACF6BC193E116000F89151 /* Components */,
+				D9ACF6BB193E114D00F89151 /* Framework */,
+			);
+			name = "Entity System";
+			sourceTree = "<group>";
+		};
+		D9ACF6BB193E114D00F89151 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACF6B8193E10EF00F89151 /* Entity.h */,
+				D9ACF6B9193E10EF00F89151 /* Entity.m */,
+				D9ACF6C6193E125D00F89151 /* EntityManager.h */,
+				D9ACF6C7193E125D00F89151 /* EntityManager.m */,
+				D9ACF6D0193E1D3D00F89151 /* EntityFactory.h */,
+				D9ACF6D1193E1D3D00F89151 /* EntityFactory.m */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		D9ACF6BC193E116000F89151 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACF6BD193E118500F89151 /* Component.h */,
+				D9ACF6BE193E118500F89151 /* Component.m */,
+				D9ACF6C0193E11BE00F89151 /* RenderComponent.h */,
+				D9ACF6C1193E11BE00F89151 /* RenderComponent.m */,
+				D9ACF6C3193E121700F89151 /* HealthComponent.h */,
+				D9ACF6C4193E121700F89151 /* HealthComponent.m */,
+				D9ACF6D3193E1F0400F89151 /* MoveComponent.h */,
+				D9ACF6D4193E1F0400F89151 /* MoveComponent.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		D9ACF6C9193E198A00F89151 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				D9ACF6CA193E199E00F89151 /* System.h */,
+				D9ACF6CB193E199E00F89151 /* System.m */,
+				D9ACF6CD193E1A0900F89151 /* HealthSystem.h */,
+				D9ACF6CE193E1A0900F89151 /* HealthSystem.m */,
+				D9ACF6D6193E252600F89151 /* MoveSystem.h */,
+				D9ACF6D7193E252600F89151 /* MoveSystem.m */,
+			);
+			name = Systems;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1044,6 +1126,7 @@
 				356FFF46163C437000FB81B7 /* CCAction.m in Sources */,
 				356FFF49163C437000FB81B7 /* CCActionCamera.m in Sources */,
 				356FFF4C163C437100FB81B7 /* CCActionCatmullRom.m in Sources */,
+				D9ACF6BF193E118500F89151 /* Component.m in Sources */,
 				356FFF4F163C437100FB81B7 /* CCActionEase.m in Sources */,
 				356FFF52163C437100FB81B7 /* CCActionGrid.m in Sources */,
 				356FFF55163C437100FB81B7 /* CCActionGrid3D.m in Sources */,
@@ -1063,7 +1146,9 @@
 				356FFF80163C437100FB81B7 /* CCDirector.m in Sources */,
 				356FFF83163C437100FB81B7 /* CCDrawingPrimitives.m in Sources */,
 				356FFF86163C437100FB81B7 /* CCDrawNode.m in Sources */,
+				D9ACF6C5193E121700F89151 /* HealthComponent.m in Sources */,
 				356FFF89163C437100FB81B7 /* CCGLProgram.m in Sources */,
+				D9ACF6CC193E199E00F89151 /* System.m in Sources */,
 				356FFF8C163C437100FB81B7 /* ccGLStateCache.m in Sources */,
 				356FFF8F163C437100FB81B7 /* CCGrabber.m in Sources */,
 				356FFF92163C437100FB81B7 /* CCGrid.m in Sources */,
@@ -1072,7 +1157,9 @@
 				356FFF9B163C437100FB81B7 /* CCLabelTTF.m in Sources */,
 				356FFF9E163C437100FB81B7 /* CCLayer.m in Sources */,
 				356FFFA2163C437100FB81B7 /* CCMenu.m in Sources */,
+				D9ACF6CF193E1A0900F89151 /* HealthSystem.m in Sources */,
 				356FFFA5163C437200FB81B7 /* CCMenuItem.m in Sources */,
+				D9ACF6C8193E125D00F89151 /* EntityManager.m in Sources */,
 				356FFFA8163C437200FB81B7 /* CCMotionStreak.m in Sources */,
 				356FFFAB163C437200FB81B7 /* CCNode+Debug.m in Sources */,
 				356FFFAE163C437200FB81B7 /* CCNode.m in Sources */,
@@ -1081,8 +1168,10 @@
 				356FFFB7163C437200FB81B7 /* CCParticleExamples.m in Sources */,
 				356FFFBA163C437200FB81B7 /* CCParticleSystem.m in Sources */,
 				356FFFBD163C437200FB81B7 /* CCParticleSystemQuad.m in Sources */,
+				D9ACF6D8193E252600F89151 /* MoveSystem.m in Sources */,
 				356FFFC0163C437200FB81B7 /* CCPhysicsDebugNode.m in Sources */,
 				356FFFC3163C437200FB81B7 /* CCPhysicsSprite.mm in Sources */,
+				D9ACF6C2193E11BE00F89151 /* RenderComponent.m in Sources */,
 				356FFFC6163C437200FB81B7 /* CCProgressTimer.m in Sources */,
 				356FFFCA163C437200FB81B7 /* CCRenderTexture.m in Sources */,
 				356FFFCD163C437200FB81B7 /* CCScene.m in Sources */,
@@ -1101,12 +1190,14 @@
 				356F0003163C437300FB81B7 /* CCTMXLayer.m in Sources */,
 				356F0006163C437300FB81B7 /* CCTMXObjectGroup.m in Sources */,
 				356F0009163C437300FB81B7 /* CCTMXTiledMap.m in Sources */,
+				D9ACF6BA193E10EF00F89151 /* Entity.m in Sources */,
 				356F000C163C437300FB81B7 /* CCTMXXMLParser.m in Sources */,
 				356F000F163C437300FB81B7 /* CCTransition.m in Sources */,
 				356F0012163C437300FB81B7 /* CCTransitionPageTurn.m in Sources */,
 				356F0015163C437300FB81B7 /* CCTransitionProgress.m in Sources */,
 				356F0019163C437300FB81B7 /* cocos2d.m in Sources */,
 				356F0020163C437300FB81B7 /* CCDirectorIOS.m in Sources */,
+				D9ACF6D2193E1D3D00F89151 /* EntityFactory.m in Sources */,
 				356F0023163C437300FB81B7 /* CCES2Renderer.m in Sources */,
 				356F0027163C437300FB81B7 /* CCGLView.m in Sources */,
 				356F002B163C437300FB81B7 /* CCTouchDispatcher.m in Sources */,
@@ -1121,6 +1212,7 @@
 				356F0048163C437300FB81B7 /* CCFileUtils.m in Sources */,
 				356F004B163C437300FB81B7 /* CCProfiling.m in Sources */,
 				356F004D163C437300FB81B7 /* ccUtils.c in Sources */,
+				D9ACF6D5193E1F0400F89151 /* MoveComponent.m in Sources */,
 				356F0051163C437300FB81B7 /* CCVertex.m in Sources */,
 				356F0054163C437300FB81B7 /* CGPointExtension.m in Sources */,
 				356F0057163C437300FB81B7 /* NSThread+performBlock.m in Sources */,

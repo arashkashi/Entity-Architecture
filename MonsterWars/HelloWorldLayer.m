@@ -14,6 +14,13 @@
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 
+#import "EntityManager.h"
+#import "HealthSystem.h"
+#import "RenderComponent.h"
+#import "HealthComponent.h"
+#import "EntityFactory.h"
+#import "MoveSystem.h"
+
 #pragma mark - HelloWorldLayer
 
 // HelloWorldLayer implementation
@@ -23,6 +30,14 @@
     CCLabelBMFont * _stateLabel;
     CCSpriteBatchNode * _batchNode;
     BOOL _gameOver;
+    
+    EntityManager * _entityManager;
+    HealthSystem * _healthSystem;
+    MoveSystem * _moveSystem;
+    Entity * _aiPlayer;
+    Entity * _humanPlayer;
+    EntityFactory * _entityFactory;
+
 }
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
@@ -39,6 +54,51 @@
     
     // return the scene
     return scene;
+}
+
+- (void)addPlayers {
+
+    CGSize winSize = [CCDirector sharedDirector].winSize;
+    _entityManager = [[EntityManager alloc] init];
+    _healthSystem = [[HealthSystem alloc] initWithEntityManager:_entityManager];
+    _moveSystem = [[MoveSystem alloc] initWithEntityManager:_entityManager];
+    _entityFactory = [[EntityFactory alloc] initWithEntityManager:_entityManager batchNode:_batchNode];
+    
+    _aiPlayer = [_entityFactory createAIPlayer];
+    RenderComponent * aiRender = (RenderComponent *) [_entityManager getComponentOfClass:[RenderComponent class] forEntity:_aiPlayer];
+    if (aiRender) {
+        aiRender.node.position = ccp(winSize.width - aiRender.node.contentSize.width/2, winSize.height/2);
+    }
+    
+    _humanPlayer = [_entityFactory createHumanPlayer];
+    RenderComponent * humanRender = (RenderComponent *) [_entityManager getComponentOfClass:[RenderComponent class] forEntity:_humanPlayer];
+    if (humanRender) {
+        humanRender.node.position = ccp(humanRender.node.contentSize.width/2, winSize.height/2);
+    }
+}
+
+- (void)update:(ccTime)dt {
+    [_healthSystem update:dt];
+    [_moveSystem update:dt];
+    
+    // Test code to decrease AI's health
+    static float timeSinceLastHealthDecrease = 0;
+    timeSinceLastHealthDecrease += dt;
+    if (timeSinceLastHealthDecrease > 1.0) {
+        timeSinceLastHealthDecrease = 0;
+        HealthComponent * health = (HealthComponent *) [_entityManager getComponentOfClass:[HealthComponent class] forEntity:_aiPlayer];
+        if (health) {
+            health.curHp -= 10;
+            if (health.curHp <= 0) {
+                [self showRestartMenu:YES];
+            }
+        }
+    }
+    
+}
+
+- (void)draw {
+    [_healthSystem draw];
 }
 
 - (void)basicSetup {
@@ -128,9 +188,6 @@
     [self scheduleUpdate];
 }
 
-- (void)addPlayers {
-    
-}
 
 -(id) init
 {
@@ -199,9 +256,6 @@
     [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 }
 
-- (void)update:(ccTime)dt {
-    
-}
 
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -214,6 +268,17 @@
 
 - (void)quirkButtonTapped:(id)sender {
     NSLog(@"Quirk button tapped!");
+    NSLog(@"Quirk button tapped!");
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:@"spawn.wav"];
+    
+    Entity * entity = [_entityFactory createQuirkMonster];
+    RenderComponent * render = (RenderComponent *) [_entityManager getComponentOfClass:[RenderComponent class] forEntity:entity];
+    if (render) {
+        CGSize winSize = [CCDirector sharedDirector].winSize;
+        float randomOffset = 5.0;// CCRANDOM_X_Y(-winSize.height * 0.25, winSize.height * 0.25);
+        render.node.position = ccp(winSize.width * 0.25, winSize.height * 0.5 + randomOffset);
+    }
 }
 
 - (void)zapButtonTapped:(id)sender {
